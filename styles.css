@@ -1,13 +1,230 @@
 /* variables */
+:root{
+  --primary: #F42BA9;
+  --secondary: #120012;
+}
 
 /* reset */
+body, p, a, ul, li{
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+li{
+  list-style-type: none;
+}
 
 /* base styles */
+body{
+  background: var(--secondary);
+  overflow-x: hidden;
+  font-family: 'VCR';
+}
+.button{
+  background: none;
+  border: 2px solid var(--primary);
+  color: var(--primary);
+  padding: 6px 12px;
+  border-radius: 10px;
+  text-transform: uppercase;
+  box-shadow: 1px 2px 3px rgba(7, 251, 203,0.6);
+  display: inline-block;
+  font-size: 1em;
+}
+.button:hover{
+  color: var(--secondary);
+  background: var(--primary);
+}
+input,textarea{
+  background: rgba(7,251,203,0.1);
+  padding: 10px 16px;
+  border-radius: 10px;;
+  border: 2px solid rgba(7,251,203);
+  color: rgba(7,251,203);
+  font-size: 1em;
+  box-shadow: 1px 2px 3px var(--primary);
+}
 
 /* fonts */
+@font-face{
+  font-family: 'VCR';
+  src: url("assets/fonts/VCR_OSD_MONO_1.001.ttf");
+}
+@font-face{
+  font-family: "Invasion";
+  src: url("assets/fonts/invasion2000.regular.ttf");
+}
+h1,h2,h3,h4{
+  font-family: "Invasion";
+  color: var(--primary);
+  font-weight: bold;
+  line-height: 1.4em;
+}
+p,a,li{
+  color: rgb(7,251,203);
+  line-height: 1.4em;
+  font-size: 1em;
+}
+h1, h3{
+  font-size: 1.2em;
+}
+h2{
+  font-size: 1.6em;
+}
+h4{
+  font-size: 1.1em;
+}
+.leading{
+  font-size: 1.1em;
+}
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+  }
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+  }
+}
 
 /* mobile styles */
+.grid{
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 10px;
+  box-sizing: border-box;
+}
+.site-nav{
+  margin: 0 20px;
+}
+.site-nav h1{
+  grid-column: 1/4;
+  grid-row: 1;
+  padding-bottom: 10px;
+  border-bottom: 3px solid var(--primary);
+  display: inline-block;
+}
+.site-nav ul{
+  display: none;
+}
+#welcome{
+  padding: 0 20px 20px 20px;
+}
+.welcome-text{
+  grid-column: 1/6;
+}
+.welcome-text a{
+  margin: 20px 0;
+}
+.welcome-img{
+  grid-column: 6/9;
+}
+.welcome-img img{
+  width: 200%;
+}
+#cool{
+  background: url(assets/grid-bg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  padding: 30px 20px;
 
+}
+#cool h3{
+  margin-bottom: 0;
+  text-align: center;
+}
+.stuff{
+  margin: 20px 0;
+}
+.stuff a{
+  grid-column: 1/9;
+  display: flex;
+  margin: 20px 0;
+}
+.stuff a *{
+  margin: 0 20px;
+  max-width: 40%;
+  align-self: center;
+}
+.stuff h4{
+  color: rgb(7,251,203);
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+#albums{
+  padding: 30px 20px;
+  background: black;
+}
+#albums h3{
+  text-align: center;
+}
+#albums ul{
+  margin: 40px 0;
+}
+#albums li{
+  padding: 10px;
+  background: rgba(0,0,0,0.2);
+  grid-column: span 4;
+  text-align: center;
+}
+#albums img{
+  height: auto;
+  width: 100%;
+  margin: 10px auto;
+}
+#album p{
+  text-align: center;
+  margin: 0 20px;
+}
+#contact{
+  padding: 30px 20px;
+  background: var(--secondary);
+}
+#contact h3, #contact p{
+  margin-bottom: 0;
+  text-align: center;
+}
+#contact form{
+  width: 80%;
+  max-width: 400px;
+  margin: 20px auto;
+  text-align: center;
+}
+#contact input, #contact textarea{
+  width: 100%;
+  margin: 10px 0;
+}
+#contact textarea{
+  max-width: 100%;
+  height: 200px;
+}
+#contact .button{
+  margin-top: 10px;
+}
+footer{
+  padding: 30px 20px;
+  background-color: var(--secondary);
+  background-image: url(assets/banner-img.jpg);
+  background-size: 40%;
+  background-repeat: no-repeat;
+  background-position: top center;
+}
+footer .copyright{
+  grid-column: 1/3;
+  font-size: 0.8em;
+}
+footer .social{
+  grid-column: 7/9;
+  display: flex;
+  justify-content: flex-end;
+}
+footer li{
+  margin: 0 6px;
+}
+footer img{
+  width: 20px;
+}
 /* small tablet styles */
 
 /* large tablet styles */
