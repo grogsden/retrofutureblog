@@ -77,14 +77,6 @@ h4{
 .leading{
   font-size: 1.1em;
 }
-@-webkit-keyframes glow {
-  from {
-    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
-  }
-  to {
-    text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
-  }
-}
 
 /* mobile styles */
 .grid{
@@ -148,10 +140,6 @@ h4{
 }
 .stuff h4{
   color: rgb(7,251,203);
-  -webkit-animation: glow 1s ease-in-out infinite alternate;
-  -moz-animation: glow 1s ease-in-out infinite alternate;
-  animation: glow 1s ease-in-out infinite alternate;
-
 }
 #albums{
   padding: 30px 20px;
@@ -290,11 +278,9 @@ footer img{
   .site-nav li{
     margin-left: 20px;
   }
-  .site-nav li:hover{
-  -webkit-animation: glow 1s ease-in-out infinite alternate;
-  -moz-animation: glow 1s ease-in-out infinite alternate;
-  animation: glow 1s ease-in-out infinite alternate;
-  }
+  /* .site-nav li:hover{
+
+  } */
   .welcome-text{
     align-self: center;
 
